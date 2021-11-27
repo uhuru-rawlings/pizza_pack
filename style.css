@@ -34,3 +34,6 @@ nav ul li a:hover{
     color: #9678ee;
     font-size: 25px;
 }
+#comments .card{
+    width: 350px;
+}
