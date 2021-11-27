@@ -22,31 +22,54 @@
         </ul>
        </nav>
     </div>
-    <div class="container">
+    <div class="container" id="slideitems">
         <p >These are the common pizza types:- 
-           <span id="pizzastype"></span>
-        </p>
+            <span id="pizzaTypes"></span>
+            <script>
+             var i = 0;
+             var pizzas = ["Neapolitan Pizza",
+                 "Chicago Pizza",
+                 "New York-Style Pizza",
+                 "Sicilian Pizza",
+                 "Greek Pizza",
+                 "California Pizza",
+                 "Detroit Pizza",
+                 "St. Louis Pizza"];
+                 const pizzatype = () =>{
+                 document.getElementById("pizzaTypes").innerHTML = pizzas[i];
+                 if(i < pizzas.length - 1){
+                     i++;
+                 }else{
+                     i = 0;
+                 }
+                 setTimeout("pizzatype()",4000);
+               }
+         pizzatype();
+     </script>
+         </p>
+        <p class="imageslide">
+            <img  alt="imageslide" id="pizzaImages">
         <script>
-                var i = 0;
-                var pizzas = ["Neapolitan Pizza",
-                    "Chicago Pizza",
-                    "New York-Style Pizza",
-                    "Sicilian Pizza",
-                    "Greek Pizza",
-                    "California Pizza",
-                    "Detroit Pizza",
-                    "St. Louis Pizza"];
-                    const pizzatype = () =>{
-                    document.getElementById("pizzastype").innerHTML = pizzas[i];
-                    if(i < pizzas.length + 1){
-                        i++;
+            // second
+                var j = 0;
+                var images = ["images/pizza1.jpeg","images/pizza2.jpeg","images/pizza3.jpeg","images/pizza4.jpeg","images/pizza5.jpeg","images/pizza6.jpeg"];
+                const imageslide = () =>{
+                   
+                    document.getElementById("pizzaImages").src = images[j];
+                    if(j < images.length - 1){
+                        j++;
                     }else{
-                        i = 0;
+                        j = 0;
                     }
-                    setTimeout("pizzatype()",3000);
+                    setTimeout("imageslide()",5000);
                   }
-            window.onload = pizzatype;
+            window.onload = imageslide;
         </script>
+        </p>
+    </div>
+    <!-- body -->
+    <div class="container" id="buypizza">
+        
     </div>
 </body>
 </html>

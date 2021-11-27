@@ -90,6 +90,12 @@ nav ul li a:hover{
     padding: 5px;
     cursor: pointer;
 }
-#pizzastype{
+#pizzaTypes{
     color: #9678ee;
+}
+#slideitems{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px;
 }
