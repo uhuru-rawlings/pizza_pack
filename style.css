@@ -35,6 +35,11 @@ nav ul li a:hover{
     font-size: 25px;
 }
 #comments .card{
-    width: 350px;
+    width: 320px;
     background-color: inherit;
+    padding: 5px;
+}
+#comments{
+    display: flex;
+    justify-content: space-between;
 }
