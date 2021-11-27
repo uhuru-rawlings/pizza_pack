@@ -22,6 +22,31 @@
         </ul>
        </nav>
     </div>
-    
+    <div class="container">
+        <p >These are the common pizza types:- 
+           <span id="pizzastype"></span>
+        </p>
+        <script>
+                var i = 0;
+                var pizzas = ["Neapolitan Pizza",
+                    "Chicago Pizza",
+                    "New York-Style Pizza",
+                    "Sicilian Pizza",
+                    "Greek Pizza",
+                    "California Pizza",
+                    "Detroit Pizza",
+                    "St. Louis Pizza"];
+                    const pizzatype = () =>{
+                    document.getElementById("pizzastype").innerHTML = pizzas[i];
+                    if(i < pizzas.length + 1){
+                        i++;
+                    }else{
+                        i = 0;
+                    }
+                    setTimeout("pizzatype()",3000);
+                  }
+            window.onload = pizzatype;
+        </script>
+    </div>
 </body>
 </html>

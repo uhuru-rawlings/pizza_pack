@@ -29,7 +29,7 @@ const validate = () =>{
 
 $(document).ready(function(){
     $("#question1").click(function(){
-        $("#answer1").toggle();
+        $("#answer1").toggle("slow");
         if($("#plus1").html() == "+"){
             $("#plus1").html("-");
         }else{
@@ -39,7 +39,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $("#question2").click(function(){
-        $("#answer2").toggle();
+        $("#answer2").toggle("slow");
         if($("#plus2").html() == "+"){
             $("#plus2").html("-");
         }else{
@@ -49,7 +49,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $("#question3").click(function(){
-        $("#answer3").toggle();
+        $("#answer3").toggle("slow");
         if($("#plus3").html() == "+"){
             $("#plus3").html("-");
         }else{
@@ -59,7 +59,7 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $("#question4").click(function(){
-        $("#answer4").toggle();
+        $("#answer4").toggle("slow");
         if($("#plus4").html() == "+"){
             $("#plus4").html("-");
         }else{
