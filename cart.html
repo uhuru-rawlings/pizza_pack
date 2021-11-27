@@ -22,6 +22,15 @@
         </ul>
        </nav>
     </div>
-    
+    <div class="list" id="list1"></div>
+    <div class="list" id="list2"></div>
+    <script>
+        var data = JSON.stringify(localStorage.getItem("Item1"));
+        const commas = ',';
+        var arraysdata = data.split(commas);
+        document.getElementById("list1").innerHTML = arraysdata[0].replace('"',"");
+        document.getElementById("list2").innerHTML = arraysdata[1].replace('"',"");
+        // alert(arraysdata[0]);
+    </script>
 </body>
 </html>
