@@ -81,8 +81,9 @@ nav ul li a:hover{
     margin: auto;
 }
 .answer{
-    background-color: #ffffff;
+    background-color: rgb(238, 238, 238);
     padding: 8px;display: none;
+    border-radius: 8px;
 }
 .question{
     color: #9678ee;

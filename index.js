@@ -30,20 +30,40 @@ const validate = () =>{
 $(document).ready(function(){
     $("#question1").click(function(){
         $("#answer1").toggle();
+        if($("#plus1").html() == "+"){
+            $("#plus1").html("-");
+        }else{
+            $("#plus1").html("+");
+        }
     });
 });
 $(document).ready(function(){
     $("#question2").click(function(){
         $("#answer2").toggle();
+        if($("#plus2").html() == "+"){
+            $("#plus2").html("-");
+        }else{
+            $("#plus2").html("+");
+        }
     });
 });
 $(document).ready(function(){
     $("#question3").click(function(){
         $("#answer3").toggle();
+        if($("#plus3").html() == "+"){
+            $("#plus3").html("-");
+        }else{
+            $("#plus3").html("+");
+        }
     });
 });
 $(document).ready(function(){
     $("#question4").click(function(){
         $("#answer4").toggle();
+        if($("#plus4").html() == "+"){
+            $("#plus4").html("-");
+        }else{
+            $("#plus4").html("+");
+        }
     });
 });
