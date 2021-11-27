@@ -70,3 +70,13 @@ nav ul li a:hover{
 .tittles{
     color: #9678ee;
 }
+#username,#usermail,#messages{
+    width: 300px;
+}
+#messages{
+    height: 150px;
+}
+#forms{
+    width: 300px;
+    margin: auto;
+}
