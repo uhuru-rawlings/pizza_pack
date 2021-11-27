@@ -28,5 +28,7 @@ const validate = () =>{
 }
 
 $(document).ready(function(){
-    
+    $("#question1").click(function(){
+        $("#answer1").toggle();
+    });
 });
