@@ -22,6 +22,223 @@
         </ul>
        </nav>
     </div>
-    
+    <div class="container" id="shoppingcart">
+        <div class="card" id="pricecard8">
+            <img src="images/CaliforniaPizza.jpg" width="100%" height="150px" alt="CaliforniaPizza">
+            <p class="prices"><span class="pizzanames">CaliforniaPizza</span> <span>1000 Kshs</span></p>
+            <div class="prices">
+                <button class="btn btn-primary" onclick="getbuyid()">+</button>
+                <input type="submit" value="0" id="CaliforniaPizza" class="btn btn-secondary">
+                <button class="btn btn-primary" onclick="reduceitems()">-</button>
+            </div>
+            <script>
+                const getbuyid = () =>{
+                    var quantity = document.getElementById("CaliforniaPizza").value;
+                   if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                    var newquantity = parseInt(quantity) + 1;
+                    document.getElementById("CaliforniaPizza").value = newquantity;
+                   }
+                }
+                const reduceitems = () =>{
+                    var quantity = document.getElementById("CaliforniaPizza").value;
+                    if(parseInt(quantity) > 0){
+                        var newquantity = parseInt(quantity) - 1;
+                    document.getElementById("CaliforniaPizza").value = newquantity;
+                    }
+                }
+                
+            </script>
+        </div>
+        <!-- second -->
+        <div class="card" id="pricecard8">
+            <img src="images/ChicagoPizza.jpeg" width="100%" height="150px" alt="CaliforniaPizza">
+            <p class="prices"><span class="pizzanames">ChicagoPizza</span> <span>900 Kshs</span></p>
+            <div class="prices">
+                <button class="btn btn-primary" onclick="ChicagoPizzaadd()">+</button>
+                <input type="submit" value="0" id="ChicagoPizza" class="btn btn-secondary">
+                <button class="btn btn-primary" onclick="ChicagoPizzareduce()">-</button>
+            </div>
+            <script>
+                const ChicagoPizzaadd = () =>{
+                    var quantity = document.getElementById("ChicagoPizza").value;
+                   if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                    var newquantity = parseInt(quantity) + 1;
+                    document.getElementById("ChicagoPizza").value = newquantity;
+                   }
+                }
+                const ChicagoPizzareduce = () =>{
+                    var quantity = document.getElementById("ChicagoPizza").value;
+                    if(parseInt(quantity) > 0){
+                        var newquantity = parseInt(quantity) - 1;
+                    document.getElementById("ChicagoPizza").value = newquantity;
+                    }
+                }
+                
+            </script>
+        </div>
+        <!-- third -->
+        <div class="card" id="pricecard8">
+            <img src="images/DetroitPizza.jpg" width="100%" height="150px" alt="CaliforniaPizza">
+            <p class="prices"><span class="pizzanames">DetroitPizza</span> <span>850 Kshs</span></p>
+            <div class="prices">
+                <button class="btn btn-primary" onclick="DetroitPizzaadd()">+</button>
+                <input type="submit" value="0" id="DetroitPizza" class="btn btn-secondary">
+                <button class="btn btn-primary" onclick="DetroitPizzareduce()">-</button>
+            </div>
+            <script>
+                const DetroitPizzaadd = () =>{
+                    var quantity = document.getElementById("DetroitPizza").value;
+                   if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                    var newquantity = parseInt(quantity) + 1;
+                    document.getElementById("DetroitPizza").value = newquantity;
+                   }
+                }
+                const DetroitPizzareduce = () =>{
+                    var quantity = document.getElementById("DetroitPizza").value;
+                    if(parseInt(quantity) > 0){
+                        var newquantity = parseInt(quantity) - 1;
+                    document.getElementById("DetroitPizza").value = newquantity;
+                    }
+                }
+                
+            </script>
+        </div>
+    <!-- fourth -->
+    <div class="card" id="pricecard8">
+        <img src="images/GreekPizza.jpg" width="100%" height="150px" alt="CaliforniaPizza">
+        <p class="prices"><span class="pizzanames">GreekPizza</span> <span>950 Kshs</span></p>
+        <div class="prices">
+            <button class="btn btn-primary" onclick="GreekPizzaadd()">+</button>
+            <input type="submit" value="0" id="GreekPizza" class="btn btn-secondary">
+            <button class="btn btn-primary" onclick="GreekPizzareduce()">-</button>
+        </div>
+        <script>
+            const GreekPizzaadd = () =>{
+                var quantity = document.getElementById("GreekPizza").value;
+               if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                var newquantity = parseInt(quantity) + 1;
+                document.getElementById("GreekPizza").value = newquantity;
+               }
+            }
+            const GreekPizzareduce = () =>{
+                var quantity = document.getElementById("GreekPizza").value;
+                if(parseInt(quantity) > 0){
+                    var newquantity = parseInt(quantity) - 1;
+                document.getElementById("GreekPizza").value = newquantity;
+                }
+            }
+            
+        </script>
+    </div>
+    <!-- fifth -->
+    <div class="card" id="pricecard8">
+        <img src="images/NeapolitanPizza.jpeg" width="100%" height="150px" alt="CaliforniaPizza">
+        <p class="prices"><span>NeapolitanPizza</span> <span id="price7">1000 Kshs</span></p>
+        <div class="prices">
+            <button class="btn btn-primary" onclick="NeapolitanPizzaadd()">+</button>
+            <input type="submit" value="0" id="NeapolitanPizza" class="btn btn-secondary">
+            <button class="btn btn-primary" onclick="NeapolitanPizzareduce()">-</button>
+        </div>
+        <script>
+            const NeapolitanPizzaadd = () =>{
+                var quantity = document.getElementById("NeapolitanPizza").value;
+               if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                var newquantity = parseInt(quantity) + 1;
+                document.getElementById("NeapolitanPizza").value = newquantity;
+               }
+            }
+            const NeapolitanPizzareduce = () =>{
+                var quantity = document.getElementById("NeapolitanPizza").value;
+                if(parseInt(quantity) > 0){
+                    var newquantity = parseInt(quantity) - 1;
+                document.getElementById("NeapolitanPizza").value = newquantity;
+                }
+            }
+            
+        </script>
+    </div>
+    <!-- sixth -->
+    <div class="card" id="pricecard8">
+        <img src="images/New York-StylePizza.jpg" width="100%" height="150px" alt="CaliforniaPizza">
+        <p class="prices"><span class="newyork">New York-StylePizza</span> <span id="price8">1000 Kshs</span></p>
+        <div class="prices">
+            <button class="btn btn-primary" onclick="StylePizzaadd()">+</button>
+            <input type="submit" value="0" id="StylePizza" class="btn btn-secondary">
+            <button class="btn btn-primary" onclick="StylePizzareduce()">-</button>
+        </div>
+        <script>
+            const StylePizzaadd = () =>{
+                var quantity = document.getElementById("StylePizza").value;
+               if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                var newquantity = parseInt(quantity) + 1;
+                document.getElementById("StylePizza").value = newquantity;
+               }
+            }
+            const StylePizzareduce = () =>{
+                var quantity = document.getElementById("StylePizza").value;
+                if(parseInt(quantity) > 0){
+                    var newquantity = parseInt(quantity) - 1;
+                document.getElementById("StylePizza").value = newquantity;
+                }
+            }
+            
+        </script>
+    </div>
+    <!-- seventh -->
+    <div class="card" id="pricecard8">
+        <img src="images/SicilianPizza.jpg" width="100%" height="150px" alt="CaliforniaPizza">
+        <p class="prices"><span class="pizzanames">SicilianPizza</span> <span>950 Kshs</span></p>
+        <div class="prices">
+            <button class="btn btn-primary" onclick="SicilianPizzaadd()">+</button>
+            <input type="submit" value="0" id="SicilianPizza" class="btn btn-secondary">
+            <button class="btn btn-primary" onclick="SicilianPizzareduce()">-</button>
+        </div>
+        <script>
+            const SicilianPizzaadd = () =>{
+                var quantity = document.getElementById("SicilianPizza").value;
+               if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                var newquantity = parseInt(quantity) + 1;
+                document.getElementById("SicilianPizza").value = newquantity;
+               }
+            }
+            const SicilianPizzareduce = () =>{
+                var quantity = document.getElementById("SicilianPizza").value;
+                if(parseInt(quantity) > 0){
+                    var newquantity = parseInt(quantity) - 1;
+                document.getElementById("SicilianPizza").value = newquantity;
+                }
+            }
+            
+        </script>
+    </div>
+    <!-- eighth -->
+    <div class="card" id="pricecard8">
+        <img src="images/StLouisPizza.jpg" width="100%" height="150px" alt="CaliforniaPizza">
+        <p class="prices"><span class="pizzanames">SicilianPizza</span> <span>950 Kshs</span></p>
+        <div class="prices">
+            <button class="btn btn-primary" onclick="StLouisPizzaadd()">+</button>
+            <input type="submit" value="0" id="StLouisPizza" class="btn btn-secondary">
+            <button class="btn btn-primary" onclick="StLouisPizzareduce()">-</button>
+        </div>
+        <script>
+            const StLouisPizzaadd = () =>{
+                var quantity = document.getElementById("StLouisPizza").value;
+               if(parseInt(quantity) == 0 || parseInt(quantity) < 5){
+                var newquantity = parseInt(quantity) + 1;
+                document.getElementById("StLouisPizza").value = newquantity;
+               }
+            }
+            const StLouisPizzareduce = () =>{
+                var quantity = document.getElementById("StLouisPizza").value;
+                if(parseInt(quantity) > 0){
+                    var newquantity = parseInt(quantity) - 1;
+                document.getElementById("StLouisPizza").value = newquantity;
+                }
+            }
+            
+        </script>
+    </div>
+      
+</div>
 </body>
 </html>
