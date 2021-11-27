@@ -1,4 +1,4 @@
-const validate = () =>{
+const validates = () =>{
     var names = document.getElementById("username").value.trim();
     var usermail = document.getElementById("usermail").value.trim();
     var messages = document.getElementById("messages").value.trim();
@@ -13,7 +13,7 @@ const validate = () =>{
         return false;
     }
 }
-const validates = () =>{
+const validate = () =>{
     var namess = document.getElementById("usernames").value.trim();
     var messagess = document.getElementById("messagess").value.trim();
     if(namess === "" || messagess === ""){
@@ -21,8 +21,12 @@ const validates = () =>{
         return false;
     }else{
         alert("Thanks for your comment");
-        document.getElementById("username").value="";
-        document.getElementById("messages").value="";
+        document.getElementById("usernames").value="";
+        document.getElementById("messagess").value="";
         return false;
     }
 }
+
+$(document).ready(function(){
+    
+});

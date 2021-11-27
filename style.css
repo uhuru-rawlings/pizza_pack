@@ -70,7 +70,7 @@ nav ul li a:hover{
 .tittles{
     color: #9678ee;
 }
-#username,#usermail,#messages{
+#username,#usernames,#usermail,#messages,#messagess{
     width: 300px;
 }
 #messages{
@@ -79,4 +79,13 @@ nav ul li a:hover{
 #forms{
     width: 300px;
     margin: auto;
+}
+.answer{
+    background-color: #ffffff;
+    padding: 8px;display: none;
+}
+.question{
+    color: #9678ee;
+    padding: 5px;
+    cursor: pointer;
 }
