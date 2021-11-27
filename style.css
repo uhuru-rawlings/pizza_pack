@@ -38,9 +38,14 @@ nav ul li a:hover{
     width: 320px;
     background-color: inherit;
     padding: 5px;
+    color: #9678ee;
 }
 #comments{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.cardnames{
+    text-align: center;
+    padding: 5px;
 }
