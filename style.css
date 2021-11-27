@@ -44,11 +44,11 @@ nav ul li a:hover{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 50px 0px 50px 0px;
 }
 .cardnames{
     text-align: center;
     padding: 5px;
-
 }
 .cardnames::after{
     content: "-----";
@@ -59,4 +59,8 @@ nav ul li a:hover{
     content: "-----";
     color: orangered;
     
+}
+#card:hover{
+  background-color: #9678ee;
+  color: #ffffff;
 }
