@@ -13,3 +13,16 @@ const validate = () =>{
         return false;
     }
 }
+const validates = () =>{
+    var namess = document.getElementById("usernames").value.trim();
+    var messagess = document.getElementById("messagess").value.trim();
+    if(namess === "" || messagess === ""){
+        alert("please fill all fields");
+        return false;
+    }else{
+        alert("Thanks for your comment");
+        document.getElementById("username").value="";
+        document.getElementById("messages").value="";
+        return false;
+    }
+}
