@@ -37,3 +37,8 @@ $(document).ready(function(){
         $("#answer2").toggle();
     });
 });
+$(document).ready(function(){
+    $("#question3").click(function(){
+        $("#answer3").toggle();
+    });
+});
