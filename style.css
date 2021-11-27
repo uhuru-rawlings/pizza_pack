@@ -48,4 +48,15 @@ nav ul li a:hover{
 .cardnames{
     text-align: center;
     padding: 5px;
+
+}
+.cardnames::after{
+    content: "-----";
+    color: orangered;
+
+}
+.cardnames::before{
+    content: "-----";
+    color: orangered;
+    
 }
