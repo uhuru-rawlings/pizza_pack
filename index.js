@@ -42,3 +42,8 @@ $(document).ready(function(){
         $("#answer3").toggle();
     });
 });
+$(document).ready(function(){
+    $("#question4").click(function(){
+        $("#answer4").toggle();
+    });
+});
