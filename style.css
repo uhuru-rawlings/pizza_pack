@@ -99,3 +99,21 @@ nav ul li a:hover{
     flex-wrap: wrap;
     padding: 30px;
 }
+.prices{
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+}
+#pricecard1,#pricecard8,#pricecard2,#pricecard3,#pricecard4,#pricecard5,#pricecard5,#pricecard6,#pricecard7{
+    width: 270px;
+    padding: 8px;
+}
+.card img{
+    border-radius: 8px;
+}
+#buypizza{
+    display: flex;
+    column-gap: 20px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
