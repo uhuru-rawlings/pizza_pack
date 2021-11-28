@@ -10,6 +10,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="index.js"></script>
+    <script src="storage.js"></script>
     <title>Pizza_pack || pizza den | cart</title>
 </head>
 <body>
@@ -25,6 +26,78 @@
         </ul>
        </nav>
     </div>
-   
+   <div class="container">
+     <table class="table">
+       <thead>
+         <tr>
+           <th>Item</th>
+           <th>Type</th>
+           <th>Quantity</th>
+           <th>Price</th>
+           <th>Tottal Price</th>
+         </tr>
+       </thead>
+       <tbody>
+         <tr>
+           <td><img src="images/SicilianPizza.jpg" width="100px" height="70px" alt="SicilianPizza"></td>
+           <td> Sicilian Pizza</td>
+           <td class="buttons"><button class="btn btn-primary" onclick="increments()">+</button> <p id="itemquantity">0</p> <button onclick="decrements()" class="btn btn-primary">-</button></td>
+           <td><span id="price1">950</span>Kshs</td>
+           <td ><span id="tottla1">0
+           </span>Kshs</td>
+         </tr>
+         <tr>
+          <td><img src="images/StLouisPizza.jpg" width="100px" height="70px" alt="StLouisPizza"></td>
+          <td> StLouis Pizza</td>
+          <td class="buttons"><button class="btn btn-primary" onclick="increments1()">+</button> <p id="itemquantity2">0</p> <button onclick="decrements1()" class="btn btn-primary">-</button></td>
+          <td><span id="price2">1000</span>Kshs</td>
+          <td ><span id="tottla2">0</span>Kshs</td>
+         </tr>
+        </tr>
+        <tr>
+         <td><img src="images/CaliforniaPizza.jpg" width="100px" height="70px" alt="CaliforniaPizza"></td>
+         <td> California Pizza</td>
+         <td class="buttons"><button class="btn btn-primary" onclick="increments2()">+</button> <p id="itemquantity3">0</p> <button onclick="decrements2()" class="btn btn-primary">-</button></td>
+         <td><span id="price3">1000</span>Kshs</td>
+         <td ><span id="tottla3">0</span>Kshs</td>
+        </tr>
+        <tr>
+          <td>  <img src="images/ChicagoPizza.jpeg" width="100px" height="70px" alt="ChicagoPizza"></td>
+          <td> Chicago Pizza</td>
+          <td class="buttons"><button class="btn btn-primary" onclick="increments3()">+</button> <p id="itemquantity4">0</p> <button onclick="decrements3()" class="btn btn-primary">-</button></td>
+          <td><span id="price4">900</span>Kshs</td>
+          <td ><span id="tottla4">0</span>Kshs</td>
+         </tr>
+         <tr>
+          <td>   <img src="images/DetroitPizza.jpg" width="100px" height="70px" alt="DetroitPizza"></td>
+          <td>Detroit Pizza</td>
+          <td class="buttons"><button class="btn btn-primary" onclick="increments4()">+</button> <p id="itemquantity5">0</p> <button onclick="decrements4()" class="btn btn-primary">-</button></td>
+          <td><span id="price5">850</span>Kshs</td>
+          <td ><span id="tottla5">0</span>Kshs</td>
+         </tr>
+         <tr>
+          <td><img src="images/GreekPizza.jpg" width="100px" height="70px" alt="GreekPizza"></td>
+          <td>Greek Pizza</td>
+          <td class="buttons"><button class="btn btn-primary" onclick="increments5()">+</button> <p id="itemquantity6">0</p> <button onclick="decrements5()" class="btn btn-primary">-</button></td>
+          <td><span id="price6">850</span>Kshs</td>
+          <td ><span id="tottla6">0</span>Kshs</td>
+         </tr>
+         <tr>
+          <td><img src="images/NeapolitanPizza.jpeg" width="100px" height="70px" alt="NeapolitanPizza"></td>
+          <td>Neapolitan Pizza</td>
+          <td class="buttons"><button class="btn btn-primary" onclick="increments6()">+</button> <p id="itemquantity7">0</p> <button onclick="decrements6()" class="btn btn-primary">-</button></td>
+          <td><span id="price7">1000</span>Kshs</td>
+          <td ><span id="tottla7">0</span>Kshs</td>
+         </tr>
+         <tr>
+          <td> <img src="images/New York-StylePizza.jpg" width="100px" height="70px" alt="New York-StylePizza"></td>
+          <td>New York-StylePizza</td>
+          <td class="buttons"><button class="btn btn-primary" onclick="increments7()">+</button> <p id="itemquantity8">0</p> <button onclick="decrements7()" class="btn btn-primary">-</button></td>
+          <td><span id="price8">1000</span>Kshs</td>
+          <td ><span id="tottla8">0</span>Kshs</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
 </body>
 </html>

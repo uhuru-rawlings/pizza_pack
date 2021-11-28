@@ -142,3 +142,11 @@ input[type=number]{
     font-size: 20px;
     font-weight: normal;
 }
+.buttons{
+    display: flex;
+    column-gap: 25px;
+
+}
+table td{
+    border: unset;
+}
