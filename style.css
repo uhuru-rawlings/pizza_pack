@@ -128,3 +128,17 @@ nav ul li a:hover{
     padding: 3px;
     border-radius: 50%;
 }
+ul li{
+    list-style: none;
+}
+#listitemss li{
+    display: flex;
+}
+input[type=number]{
+    width: 80px;
+}
+.notices{
+    color: #9678ee;
+    font-size: 20px;
+    font-weight: normal;
+}
