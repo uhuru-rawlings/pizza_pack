@@ -1,0 +1,12 @@
+label{
+    color: #9678ee;
+}
+body{
+    background-image: linear-gradient(to right,#F6E3FC,#FFF6FE,#F8E4FA);
+}
+ul li{
+    list-style: none;
+}
+/* #locations{
+    display: none;
+} */

@@ -1,0 +1,111 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="carts.js"></script>
+    <title>Pizza_pack || pizza den | cart</title>
+</head>
+<body>
+    <div class="container">
+        <form action="#" method="post">
+            <label for="selectsizes">Sizes (default size is large)
+                <br>
+                <select name="sizes" id="sizes">
+                    <option value="laerge">laerge</option>
+                    <option value="medium">medium</option>
+                    <option value="small">small</option>
+                </select>
+            </label>
+            <br>
+            <label for="topings">topings
+                <br>
+               <ul>
+                <li><input type="checkbox" name="Pepperoni" value="100" id="Pepperoni">Pepperoni (100)</li>
+                <br>
+                <li><input type="checkbox" name="Mushrooms" value="70" id="Mushrooms">Mushrooms (70)</li>
+                <br>
+                <li><input type="checkbox" name="Onions" value="50" id="Onions">Onions (50)</li>
+                <br>
+                <li><input type="checkbox" name="Sausage" value="100" id="Sausage">Sausage (100)</li>
+                <br>
+                <li><input type="checkbox" name="Bacon" value="120" id="Bacon">Bacon (120)</li>
+                <br>
+                <li><input type="checkbox" name="Blackolives" value="60" id="Blackolives">Black olives (60)</li>
+               </ul>
+                <br>
+            </label>
+            <br>
+            <label for="crust">crust
+                <br>
+                <select name="crustes" id="crustes">
+                    <option value="100">Crispy</option>
+                    <option value="150">Stuffed</option>
+                    <option value="130">Gluten-free</option>
+                </select>
+            </label>
+            <br>
+            <label for="delivery">delivery(Delivery only within Nairobi, delievry fee is 200Kshs).
+                <br>
+                <select name="delivered" id="delivered" >
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+                
+            </label>
+            <br>
+            <label for="deliveryLocation">deliveryLocation(if yes above);
+                <br>
+                <input type="text" class="form-control" name="locations" id="locations" placeholder="Enter location" required>
+            </label>
+            <br>
+            <br>
+            <input type="submit" class="btn btn-primary" value="Order" onclick="return validateOrder()"> 
+            <div class="tottal" id="totals"></div>
+        </form>
+    </div>
+    <script>
+        const validateOrder = () =>{
+           
+            const ul = document.querySelector('ul')
+            let selected = [];
+
+            // ul.addEventListener('change', event => {
+            // if (event.target.type === 'checkbox') {
+                const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+                selected = Array.from(checked).map(x => x.value)
+                // console.log(selected);
+                var sum = 0;
+                for(var i = 0; i <selected.length; i++){
+                      var alls = sum += parseInt(selected[i]);
+                      var delivered = document.getElementById("delivered").value;
+                      var crust = parseInt(document.getElementById("crustes").value);
+                      var getdelivery = document.getElementById("locations").value.trim();
+                        if(delivered == "Yes" && getdelivery != ""){
+                            var prices = 200;
+                        }else if(delivered == "Yes" && getdelivery == ""){
+                            alert("please add delivery location");
+                        }else{
+                            var prices = 0;
+                        }
+                      
+                     
+                }
+                var totals = prices + alls + crust;
+                alert(totals);
+                
+            // }
+            // });
+            
+
+            return false;
+        }
+    </script>
+</body>
+</html>

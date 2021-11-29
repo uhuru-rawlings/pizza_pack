@@ -150,3 +150,14 @@ input[type=number]{
 table td{
     border: unset;
 }
+.roundeds{
+    border-radius: 50%;
+}
+.numbers{
+    outline: none;
+    height: 35px;
+    border: 1px solid #9678ee;
+    /* border-color:#9678ee; */
+    border-radius: 8px;
+    padding-left: 10px;
+}

@@ -9,8 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="index.js"></script>
-    <script src="storage.js"></script>
+    <script src="carts.js"></script>
     <title>Pizza_pack || pizza den | cart</title>
 </head>
 <body>
@@ -19,85 +18,151 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="items.html">Buy</a></li>
-            <li><a href="cart.html">Cart <sup id="carttotal" class="bg-danger text-light"></sup> </a></li>
+            <li><a href="cart.html">Cart <sup id="carttotal" class="bg-danger text-light">0</sup> </a></li>
             <li><a href="contact.html">Contact us</a></li>
             <li><a href="comment.html">Comment</a></li>
             <li><a href="FAQs.html">FAQs</a></li>
         </ul>
        </nav>
+       <script>
+         var items = [];
+            items[1] = localStorage.getItem("Item1");
+            items[2] = localStorage.getItem("Item2");
+            items[3] = localStorage.getItem("Item3");
+            items[4] = localStorage.getItem("Item4");
+            items[5] = localStorage.getItem("Item5");
+            items[6] = localStorage.getItem("Item6");
+            items[7] = localStorage.getItem("Item7");
+            items[8] = localStorage.getItem("Item8");
+            var newArray = items.filter(v => v);
+            document.getElementById("carttotal").innerHTML = newArray.length;
+       </script>
     </div>
-   <div class="container">
+   <div class="container" id="shoppingcarts">
+     <p class="text-danger">Please refresh to see changes</p>
      <table class="table">
        <thead>
-         <tr>
-           <th>Item</th>
-           <th>Type</th>
-           <th>Quantity</th>
-           <th>Price</th>
-           <th>Tottal Price</th>
-         </tr>
+         <th>Item</th>
+         <th>Quantity</th>
+         <th>Price</th>
+         <th>TotalPrice</th>
+         <th>Remove</th>
        </thead>
-       <tbody>
-         <tr>
-           <td><img src="images/SicilianPizza.jpg" width="100px" height="70px" alt="SicilianPizza"></td>
-           <td> Sicilian Pizza</td>
-           <td class="buttons"><button class="btn btn-primary" onclick="increments()">+</button> <p id="itemquantity">0</p> <button onclick="decrements()" class="btn btn-primary">-</button></td>
-           <td><span id="price1">950</span>Kshs</td>
-           <td ><span id="tottla1">0
-           </span>Kshs</td>
-         </tr>
-         <tr>
-          <td><img src="images/StLouisPizza.jpg" width="100px" height="70px" alt="StLouisPizza"></td>
-          <td> StLouis Pizza</td>
-          <td class="buttons"><button class="btn btn-primary" onclick="increments1()">+</button> <p id="itemquantity2">0</p> <button onclick="decrements1()" class="btn btn-primary">-</button></td>
-          <td><span id="price2">1000</span>Kshs</td>
-          <td ><span id="tottla2">0</span>Kshs</td>
-         </tr>
-        </tr>
-        <tr>
-         <td><img src="images/CaliforniaPizza.jpg" width="100px" height="70px" alt="CaliforniaPizza"></td>
-         <td> California Pizza</td>
-         <td class="buttons"><button class="btn btn-primary" onclick="increments2()">+</button> <p id="itemquantity3">0</p> <button onclick="decrements2()" class="btn btn-primary">-</button></td>
-         <td><span id="price3">1000</span>Kshs</td>
-         <td ><span id="tottla3">0</span>Kshs</td>
-        </tr>
-        <tr>
-          <td>  <img src="images/ChicagoPizza.jpeg" width="100px" height="70px" alt="ChicagoPizza"></td>
-          <td> Chicago Pizza</td>
-          <td class="buttons"><button class="btn btn-primary" onclick="increments3()">+</button> <p id="itemquantity4">0</p> <button onclick="decrements3()" class="btn btn-primary">-</button></td>
-          <td><span id="price4">900</span>Kshs</td>
-          <td ><span id="tottla4">0</span>Kshs</td>
-         </tr>
-         <tr>
-          <td>   <img src="images/DetroitPizza.jpg" width="100px" height="70px" alt="DetroitPizza"></td>
-          <td>Detroit Pizza</td>
-          <td class="buttons"><button class="btn btn-primary" onclick="increments4()">+</button> <p id="itemquantity5">0</p> <button onclick="decrements4()" class="btn btn-primary">-</button></td>
-          <td><span id="price5">850</span>Kshs</td>
-          <td ><span id="tottla5">0</span>Kshs</td>
-         </tr>
-         <tr>
-          <td><img src="images/GreekPizza.jpg" width="100px" height="70px" alt="GreekPizza"></td>
-          <td>Greek Pizza</td>
-          <td class="buttons"><button class="btn btn-primary" onclick="increments5()">+</button> <p id="itemquantity6">0</p> <button onclick="decrements5()" class="btn btn-primary">-</button></td>
-          <td><span id="price6">850</span>Kshs</td>
-          <td ><span id="tottla6">0</span>Kshs</td>
-         </tr>
-         <tr>
-          <td><img src="images/NeapolitanPizza.jpeg" width="100px" height="70px" alt="NeapolitanPizza"></td>
-          <td>Neapolitan Pizza</td>
-          <td class="buttons"><button class="btn btn-primary" onclick="increments6()">+</button> <p id="itemquantity7">0</p> <button onclick="decrements6()" class="btn btn-primary">-</button></td>
-          <td><span id="price7">1000</span>Kshs</td>
-          <td ><span id="tottla7">0</span>Kshs</td>
-         </tr>
-         <tr>
-          <td> <img src="images/New York-StylePizza.jpg" width="100px" height="70px" alt="New York-StylePizza"></td>
-          <td>New York-StylePizza</td>
-          <td class="buttons"><button class="btn btn-primary" onclick="increments7()">+</button> <p id="itemquantity8">0</p> <button onclick="decrements7()" class="btn btn-primary">-</button></td>
-          <td><span id="price8">1000</span>Kshs</td>
-          <td ><span id="tottla8">0</span>Kshs</td>
-         </tr>
+       <tbody id="tablecontents">
+            <tr id="SicilianPizza">
+              <td>Sicilian Pizza</td>
+              <td><input type="number" max="5" min="1" class="SicilianPizza"   name="inputitem1"   ></td>
+              <td>950</td>
+              <td id="tottalprice1">950</td>
+              <td><button class="removebtn btn btn-danger" onclick="deleteItem(this.id)" id="Item1">Remove</button></td>
+            </tr>
+            <tr id="StLouisPizza">
+              <td>StLouis Pizza</td>
+              <td><input type="number" max="5" min="1" class="StLouisPizza"   name="inputitem1"   ></td>
+              <td>1000</td>
+              <td id="tottalprice1">1000</td>
+              <td><button class="removebtn btn btn-danger" onclick = "deleteItem(this.id)" id="Item2">Remove</button></td>
+            </tr>
+            <tr id="CaliforniaPizza">
+              <td>California Pizza</td>
+              <td><input type="number" max="5" min="1" class="CaliforniaPizza"   name="inputitem1"   ></td>
+              <td>1000</td>
+              <td id="tottalprice1">1000</td>
+              <td><button class="removebtn btn btn-danger" onclick = "deleteItem(this.id)" id="Item3">Remove</button></td>
+            </tr>
+            <tr id="ChicagoPizza">
+              <td>Chicago Pizza</td>
+              <td><input type="number" max="5" min="1" class="ChicagoPizza"   name="inputitem1"   ></td>
+              <td>900</td>
+              <td id="tottalprice1">900</td>
+              <td><button class="removebtn btn btn-danger"onclick = "deleteItem(this.id)" id="Item4" >Remove</button></td>
+            </tr>
+            <tr id="DetroitPizza">
+              <td>Detroit Pizza</td>
+              <td><input type="number" max="5" min="1" class="DetroitPizza"   name="inputitem1"   ></td>
+              <td>850</td>
+              <td id="tottalprice1">850</td>
+              <td><button class="removebtn btn btn-danger" onclick = "deleteItem(this.id)" id="Item5" >Remove</button></td>
+            </tr>
+            <tr id="GreekPizza">
+              <td>Greek Pizza</td>
+              <td><input type="number" max="5" min="1" class="GreekPizza"   name="inputitem1"   ></td>
+              <td>950</td>
+              <td id="tottalprice1">950</td>
+              <td><button class="removebtn btn btn-danger" onclick = "deleteItem(this.id)" id="Item6" >Remove</button></td>
+            </tr>
+            <tr id="NeapolitanPizza">
+              <td>Neapolitan Pizza</td>
+              <td><input type="number" max="5" min="1" class="NeapolitanPizza"   name="inputitem1"   ></td>
+              <td>1000</td>
+              <td id="tottalprice1">1000</td>
+              <td><button class="removebtn btn btn-danger" onclick = "deleteItem(this.id)" id="Item7">Remove</button></td>
+            </tr>
+            <tr id="newyork">
+              <td>New York-Style Pizza</td>
+              <td><input type="number" max="5" min="1" class="newyork"   name="inputitem1"   ></td>
+              <td>1000</td>
+              <td id="tottalprice1">1000</td>
+              <td><button class="removebtn btn btn-danger" onclick="deleteItem(this.id)" id="Item8">Remove</button></td>
+            </tr>
        </tbody>
      </table>
+     <div class="tottals" id="totals">
+       <p>tatalQuantity: <span id="totalquantity"></span></p>
+       <p>TotalPrice: <span id="totalprice"></span></p>
+     </div>
    </div>
+   <script>
+      const deleteItem = (clikced_id) =>{
+           var ItemKey = confirm("Do you want to delete this");
+           if(ItemKey == true){
+            localStorage.removeItem(clikced_id);
+            alert("Removed");
+
+           }
+      }
+   </script>
+   <script>
+     
+     var items = [];
+items[1] = localStorage.getItem("Item1");
+items[2] = localStorage.getItem("Item2");
+items[3] = localStorage.getItem("Item3");
+items[4] = localStorage.getItem("Item4");
+items[5] = localStorage.getItem("Item5");
+items[6] = localStorage.getItem("Item6");
+items[7] = localStorage.getItem("Item7");
+items[8] = localStorage.getItem("Item8");
+var newArray = items.filter(v => v);
+document.getElementById("carttotal").innerHTML = newArray.length;
+// get input values
+for(var y = 0; y <newArray.length; y++){
+  var inputNameValue = parseInt(document.getElementsByName("inputitem1").value);
+  // var allAddedItems = 
+  var tottalAddedQuantity = inputNameValue[y] += inputNameValue[y];
+  document.getElementById("totalquantity").innerHTML = tottalAddedQuantity;
+}
+var Object_new = {
+        SicilianPizza: ["Sicilian Pizza",950,"SicilianPizza.jpg"],
+        StLouisPizza: ["St. Louis Pizza",1000,"StLouisPizza.jpg"],
+        CaliforniaPizza: ["California Pizza",1000,"CaliforniaPizza.jpg"],
+        ChicagoPizza: ["Chicago Pizza",900,"ChicagoPizza.jpeg"],
+        DetroitPizza: ["Detroit Pizza",850,"DetroitPizza.jpg"],
+        GreekPizza: ["Greek Pizza",950,"GreekPizza.jpg"],
+        NeapolitanPizza: ["Neapolitan Pizza",1000,"NeapolitanPizza.jpeg"],
+        newyork: ["New York-Style Pizza",1000,"New York-StylePizza.jpg"]
+    }
+var arrayTohide = ["SicilianPizza","StLouisPizza","CaliforniaPizza","ChicagoPizza","DetroitPizza","DetroitPizza","GreekPizza","NeapolitanPizza","newyork"];
+      for(var k = 0; k <arrayTohide.length; k++){
+        document.getElementById(arrayTohide[k]).style.display = "none";
+      }
+      for(var m = 0; m < newArray.length; m++){
+        // document.getElementById(newArray[m]).style.display = "block";
+        var elemntsid = "#"+newArray[m];
+        $(elemntsid).show();
+      }
+
+   </script>
+
 </body>
 </html>

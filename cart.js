@@ -1,4 +1,4 @@
-var Objects = {
+var listStoreddat = {
     SicilianPizza: ["Sicilian Pizza","false",950],
     StLouisPizza: ["St. Louis Pizza","false",1000],
     CaliforniaPizza: ["California Pizza","false",1000],
@@ -7,13 +7,16 @@ var Objects = {
     GreekPizza: ["Greek Pizza","false",950],
     NeapolitanPizza: ["Neapolitan Pizza","false",1000],
     newyork: ["New York-Style Pizza","false",1000]
-};
+}
 var storeditems = localStorage.getItem("StoredItems");
 if(storeditems){
 
 } else{
-    localStorage.setItem("StoredItems",Objects);
+    localStorage.setItem("StoredItems",JSON.stringify(listStoreddat));
+    var gettendata = JSON.parse(localStorage.getItem("StoredItems"));
+    console.log(gettendata);
 }
+
 
 function getbuyid(clicked_id){
     // localStorage.setItem("StoredItems",Objects);
@@ -103,7 +106,6 @@ function getbuyid(clicked_id){
                alert("canceled");
            }
     }
-
 
 
 }
