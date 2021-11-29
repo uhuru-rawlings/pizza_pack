@@ -18,7 +18,7 @@
             <label for="selectsizes">Sizes (default size is large)
                 <br>
                 <select name="sizes" id="sizes">
-                    <option value="laerge">laerge</option>
+                    <option value="large">laerge</option>
                     <option value="medium">medium</option>
                     <option value="small">small</option>
                 </select>
@@ -31,7 +31,7 @@
                 <br>
                 <li><input type="checkbox" name="Mushrooms" value="70" id="Mushrooms">Mushrooms (70)</li>
                 <br>
-                <li><input type="checkbox" name="Onions" value="50" id="Onions">Onions (50)</li>
+                <li><input type="checkbox" name="Onions" value="50" id="Onions" checked>Onions (50)</li>
                 <br>
                 <li><input type="checkbox" name="Sausage" value="100" id="Sausage">Sausage (100)</li>
                 <br>
@@ -53,59 +53,67 @@
             <br>
             <label for="delivery">delivery(Delivery only within Nairobi, delievry fee is 200Kshs).
                 <br>
-                <select name="delivered" id="delivered" >
+                <select name="delivered" id="delivered">
                     <option value="Yes">Yes</option>
                     <option value="No">No</option>
                 </select>
-                
-            </label>
-            <br>
-            <label for="deliveryLocation">deliveryLocation(if yes above);
-                <br>
-                <input type="text" class="form-control" name="locations" id="locations" placeholder="Enter location" required>
             </label>
             <br>
             <br>
             <input type="submit" class="btn btn-primary" value="Order" onclick="return validateOrder()"> 
             <div class="tottal" id="totals"></div>
+            <script>
+                const validateOrder = () =>{
+                   
+                    const ul = document.querySelector('ul')
+                    let selected = [];
+        
+                    // ul.addEventListener('change', event => {
+                    // if (event.target.type === 'checkbox') {
+                        const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+                          if(checked){
+                            selected = Array.from(checked).map(x => x.value)
+                                // console.log(selected);
+                                var sum = 0;
+                                for(var i = 0; i <selected.length; i++){
+                                    var alls = sum += parseInt(selected[i]);
+                                    
+                                    var delivered = document.getElementById("delivered").value;
+                                    var crust = parseInt(document.getElementById("crustes").value);
+                                        if(delivered == "Yes"){
+                                            var prices = 200;
+                                        }else{
+                                            var prices = 0;
+                                        }
+                                    var sizes = document.getElementById("sizes").value;
+                                    if(sizes == "large"){
+                                       pizzasize = 1000;
+                                    }else if(sizes == "medium"){
+                                       pizzasize = 850;
+                                    }else{
+                                       pizzasize = 750;
+                                    }
+                                }
+                    
+                            var totals = prices + alls + crust;
+                           alert(totals);
+                          }else{
+                            var totals = parseInt(prices) + parseInt(crust);
+                           alert(totals);
+                          }
+                          localStorage.setItem("ToppingsTottal",totals);
+        
+                        
+                        
+                    // }
+                    // });
+                    
+        
+                    return false;
+                }
+            </script>
         </form>
     </div>
-    <script>
-        const validateOrder = () =>{
-           
-            const ul = document.querySelector('ul')
-            let selected = [];
-
-            // ul.addEventListener('change', event => {
-            // if (event.target.type === 'checkbox') {
-                const checked = document.querySelectorAll('input[type="checkbox"]:checked')
-                selected = Array.from(checked).map(x => x.value)
-                // console.log(selected);
-                var sum = 0;
-                for(var i = 0; i <selected.length; i++){
-                      var alls = sum += parseInt(selected[i]);
-                      var delivered = document.getElementById("delivered").value;
-                      var crust = parseInt(document.getElementById("crustes").value);
-                      var getdelivery = document.getElementById("locations").value.trim();
-                        if(delivered == "Yes" && getdelivery != ""){
-                            var prices = 200;
-                        }else if(delivered == "Yes" && getdelivery == ""){
-                            alert("please add delivery location");
-                        }else{
-                            var prices = 0;
-                        }
-                      
-                     
-                }
-                var totals = prices + alls + crust;
-                alert(totals);
-                
-            // }
-            // });
-            
-
-            return false;
-        }
-    </script>
+    
 </body>
 </html>

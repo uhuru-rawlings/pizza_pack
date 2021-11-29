@@ -6,6 +6,16 @@ nav{
     padding: 10px;
     text-align: right;
 }
+.topingsandcrust{
+    display: none;
+    position: absolute;
+    top: 20px;
+    background-color: #fdf7ff;
+    padding: 10px;
+}
+.topingsandcrust label{
+    color: #A68CF2;
+}
 nav ul li{
     list-style: none;
     display: inline;
