@@ -20,4 +20,4 @@ around Nairobi.
 ![alt text](images/md2.png)
 
 ## Live-Link
-[Live-link](https://github.com/uhuru-rawlings/pizza_pack);
+[Live-link](https://github.com/uhuru-rawlings/pizza_pack) click the link to see the live page.
